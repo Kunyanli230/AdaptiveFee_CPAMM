@@ -6,7 +6,7 @@
 
 ---
 
-## ✨ Features | 特性
+## Features | 特性
 
 - **Adaptive Fees**: `fee = clamp(min + β·vol + γ·slip + δ·shallow)` (bps)  
 - **Oracle-less TWAP**: **EMA** of on-chain spot; initialized on first liquidity  
@@ -17,7 +17,7 @@
 
 ---
 
-## 🧮 Mechanics | 算法机制
+## Mechanics | 算法机制
 
 **Constant product:**  
 \[
@@ -41,7 +41,7 @@ Price uses `token0` priced in `token1` with **1e18** scale: `price = reserve1 * 
 
 ---
 
-## 🔧 Parameters | 合约参数供更改
+## Parameters | 合约参数供更改
 
 | Name | Type | Default | Meaning |
 |---|---:|---:|---|
