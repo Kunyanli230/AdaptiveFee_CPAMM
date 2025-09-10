@@ -2,7 +2,7 @@
 
 > A constant-product AMM (`x·y = k`) with **volatility-aware dynamic fees**, **EMA (oracle-less TWAP proxy)**, and a simple **circuit breaker**. Production-style Solidity (0.8.26), Remix-ready （two ERC-20 tokens required) .
 
-**中文简介：** 一个在不依赖外部预言机的前提下，使用 **EMA（指数移动平均）** 近似 TWAP 的 **恒定乘积做市商**。手续费随**波动/滑点/深度**自适应调整，并内置**熔断阈值**。可直接在 Remix 运行 (需要先部署两个ERC-20）。
+> 中文简介： 一个在不依赖外部预言机的前提下，使用 **EMA（指数移动平均）** 近似 TWAP 的 **恒定乘积做市商**。手续费随**波动/滑点/深度**自适应调整，并内置**熔断阈值**。可直接在 Remix 运行 (需要先部署两个ERC-20）。
 
 ---
 
