@@ -23,12 +23,13 @@
 $`
 x\cdot y = k,\quad \text{amountOut}=\frac{y\cdot \text{dx\_fee}}{x+\text{dx\_fee}}
 `$
-Where $`\text{dx\_fee}=\text{dx}\cdot\bigl(1-\frac{\text{feeBps}}{10^4}\bigr).`$
+
+where $`\text{dx\_fee}=\text{dx}\cdot\bigl(1-\frac{\text{feeBps}}{10^4}\bigr).`$
 
 **EMA (TWAP proxy):**  
-$`\
+$`
 \text{EMA} \leftarrow \text{EMA} + \alpha \cdot (\text{price} - \text{EMA}),\quad \alpha\in(0,1]
-\`$
+`$
 Price uses `token0` priced in `token1` with **1e18** scale: `price = reserve1 * 1e18 / reserve0`.
 
 **Dynamic fee (bps):**
