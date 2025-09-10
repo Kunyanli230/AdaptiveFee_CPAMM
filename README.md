@@ -20,9 +20,9 @@
 ## Mechanics | 算法机制
 
 **Constant product:**  
-\[
+$`\[
 x\cdot y = k,\quad \text{amountOut}=\frac{y\cdot \text{dx\_fee}}{x+\text{dx\_fee}}
-\]
+\]`$
 其中 \(\text{dx\_fee} = \text{dx}\cdot\bigl(1-\frac{\text{feeBps}}{10^4}\bigr)\)。  
 Where \(\text{dx\_fee}=\text{dx}\cdot\bigl(1-\frac{\text{feeBps}}{10^4}\bigr)\).
 
