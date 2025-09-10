@@ -32,10 +32,10 @@ $`\
 Price uses `token0` priced in `token1` with **1e18** scale: `price = reserve1 * 1e18 / reserve0`.
 
 **Dynamic fee (bps):**
-$`\
+$`
 \text{fee}=\mathrm{clamp}\Big(\text{minFee}+\beta\cdot \text{vol}+\gamma\cdot \text{slip}+\delta\cdot \text{shallow},\ [\text{minFee},\text{maxFee}]\Big)
-\`$
-- $`\(\text{vol}=\frac{|\text{price}-\text{EMA}|}{\text{EMA}}\)`$  
+`$
+- $`(\text{vol}=\frac{|\text{price}-\text{EMA}|}{\text{EMA}}`$  
 - $`\(\text{slip}\approx \dfrac{\text{amountIn}}{\text{reserveIn}+\text{amountIn}}\)`$   
 - $`\(\text{shallow}=1-\dfrac{\min(\text{reserve0},\text{reserve1})}{\min(\text{reserve0},\text{reserve1})+K}\)`$ 
 
