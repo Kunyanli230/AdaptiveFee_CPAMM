@@ -20,10 +20,10 @@
 ## Mechanics | 算法机制
 
 **Constant product:**  
-$$ \[
+$ \[
 x\cdot y = k,\quad \text{amountOut} = \frac{y \cdot \text{dx\_fee}}{x + \text{dx\_fee}}
 \]
-where \(\text{dx\_fee} = \text{dx} \cdot (1 - \text{feeBps}/10^4)\).$$
+where \(\text{dx\_fee} = \text{dx} \cdot (1 - \text{feeBps}/10^4)\).$
 
 **EMA (TWAP proxy):**  
 \[
