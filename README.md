@@ -19,19 +19,26 @@
 
 ## Mechanics | 算法机制
 
-**Constant product:** $x\cdot y = k,\quad 
-\text{amountOut}=\dfrac{y\cdot \text{dx\_fee}}{x+\text{dx\_fee}}$
+**Constant product:**  
+\[
+x\cdot y = k,\quad \text{amountOut}=\frac{y\cdot \text{dx\_fee}}{x+\text{dx\_fee}}
+\]
+其中 \(\text{dx\_fee} = \text{dx}\cdot\bigl(1-\frac{\text{feeBps}}{10^4}\bigr)\)。  
+Where \(\text{dx\_fee}=\text{dx}\cdot\bigl(1-\frac{\text{feeBps}}{10^4}\bigr)\).
 
-**EMA:** $\text{EMA}\leftarrow \text{EMA}+\alpha(\text{price}-\text{EMA}),\ \alpha\in(0,1]$
+**EMA (TWAP proxy):**  
+\[
+\text{EMA} \leftarrow \text{EMA} + \alpha \cdot (\text{price} - \text{EMA}),\quad \alpha\in(0,1]
+\]
+Price uses `token0` priced in `token1` with **1e18** scale: `price = reserve1 * 1e18 / reserve0`.
 
-**Dynamic fee:**
-$$
-\text{fee}=\mathrm{clamp}\!\Big(\text{minFee}+\beta\cdot \text{vol}+\gamma\cdot \text{slip}+\delta\cdot \text{shallow},\;[\text{minFee},\text{maxFee}]\Big)
-$$
-
-- `vol = |price − EMA| / EMA`  
-- `slip ≈ amountIn / (reserveIn + amountIn)`  
-- `shallow = 1 − min(reserve0,reserve1)/(min(reserve0,reserve1)+K)`
+**Dynamic fee (bps):**
+\[
+\text{fee}=\mathrm{clamp}\Big(\text{minFee}+\beta\cdot \text{vol}+\gamma\cdot \text{slip}+\delta\cdot \text{shallow},\ [\text{minFee},\text{maxFee}]\Big)
+\]
+- \(\text{vol}=\frac{|\text{price}-\text{EMA}|}{\text{EMA}}\)  
+- \(\text{slip}\approx \dfrac{\text{amountIn}}{\text{reserveIn}+\text{amountIn}}\)  
+- \(\text{shallow}=1-\dfrac{\min(\text{reserve0},\text{reserve1})}{\min(\text{reserve0},\text{reserve1})+K}\)
 
 ---
 
