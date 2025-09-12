@@ -1,0 +1,12 @@
+[programs.localnet]
+adaptive_cpamm = "Adap1veCpAMM_Rust"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "Localnet"
+wallet = "~/.config/solana/8cAmRa83XAGmpUbWmajQxxVg5FZATxzbWNBcdbcNDCcR"
+
+[scripts]
+test = "anchor test"
